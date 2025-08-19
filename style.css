@@ -1,0 +1,148 @@
+/* Import a modern font for a clean look */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* Basic styles for the body and overall layout */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #F5F5F5; /* Light blue-gray background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: #FFFFFF; /* White card background */
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: #2c3e50; /* Dark blue heading color */
+  margin-bottom: 30px;
+}
+
+/* Styles for the form and input field */
+.todo-form {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.todo-input {
+  flex-grow: 1;
+  padding: 15px;
+  border: 2px solid #e0e6ed;
+  border-radius: 12px;
+  font-size: 1rem;
+  color: #34495e;
+  transition: all 0.3s ease;
+}
+
+.todo-input:focus {
+  outline: none;
+  border-color: #3498db; /* Blue focus highlight */
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.add-btn {
+  padding: 15px 25px;
+  background-color: #3498db; /* Blue button color */
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for the to-do list container and individual items */
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ecf0f1; /* Light gray item background */
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.todo-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.todo-item.completed {
+  background-color: #dbe4ee; /* Different color for completed tasks */
+  text-decoration: line-through;
+  color: #7f8c8d; /* Muted text color for completed tasks */
+}
+
+/* Styles for buttons within the to-do items */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.toggle-btn, .delete-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  transition: transform 0.2s ease;
+}
+
+.toggle-btn {
+  background-color: #2ecc71; /* Green toggle button */
+}
+
+.toggle-btn:hover {
+  background-color: #27ae60;
+  transform: scale(1.1);
+}
+
+.delete-btn {
+  background-color: #e74c3c; /* Red delete button */
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+  transform: scale(1.1);
+}
+
+/* Placeholder for when the list is empty */
+.empty-list-message {
+  text-align: center;
+  color: #7f8c8d;
+  font-style: italic;
+  padding: 20px;
+}
