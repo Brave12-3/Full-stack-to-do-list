@@ -1,0 +1,33 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full-Stack To-Do List</title>
+  <!-- Link to the separate CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Main container for the to-do list application -->
+  <div class="container">
+    <h1 class="title">My To-Do List</h1>
+
+    <!-- Form for adding new to-do items -->
+    <form id="todo-form" class="todo-form">
+      <input type="text" id="todo-input" class="todo-input" placeholder="Add a new task..." required>
+      <button type="submit" class="add-btn">
+        Add Task
+      </button>
+    </form>
+
+    <!-- List container for displaying to-do items -->
+    <div id="todo-list" class="todo-list">
+      <!-- To-do items will be dynamically added here by JavaScript -->
+    </div>
+  </div>
+
+  <!-- Link to the separate JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
